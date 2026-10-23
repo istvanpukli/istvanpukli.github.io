@@ -208,20 +208,6 @@ h2 {
   background: var(--color-surface);
 }
 
-.hey {
-  position: absolute;
-  left: -28px;
-  top: 170px;
-  display: grid;
-  place-items: center;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: var(--color-highlight);
-  color: var(--color-on-accent);
-  font-weight: 400;
-  font-size: 18px;
-}
 
 .hero-lines { grid-area: lines; display: grid; gap: 8px; margin-top: 12px; }
 .hero-tagline { color: var(--color-text-muted); font-size: 15px; line-height: 22px; }
@@ -248,7 +234,6 @@ h2 {
   .hero-word-2 { justify-self: end; }
   .hero-portrait { width: 320px; }
   .hero-portrait img { width: 320px; border-radius: 28px; }
-  .hey { left: -40px; top: 320px; width: 80px; height: 80px; font-size: 22px; }
   .hero-lines { justify-self: end; text-align: right; margin-top: 12px; gap: 12px; }
   .hero-tagline { font-size: 18px; line-height: 26px; }
   .hero-motto { font-size: 24px; line-height: 32px; }
@@ -367,7 +352,7 @@ h2 {
 /* ==========================================================================
    About
    ========================================================================== */
-.about-main { display: grid; gap: 24px; }
+.about-body { display: grid; gap: 24px; }
 
 .facts { display: grid; gap: 10px; }
 .facts div { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -375,36 +360,11 @@ h2 {
 .facts a { text-decoration: none; }
 .facts a:hover { color: var(--color-accent); }
 
-.stats { display: grid; gap: 20px; margin-top: 24px; }
-.stats li { display: flex; align-items: center; gap: 16px; }
-.stat-num {
-  flex: none;
-  width: 72px;
-  color: var(--color-highlight);
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 53px;
-}
-.stat-label { font-weight: 600; font-size: 16px; line-height: 21px; }
-
-/* About: the CV button sits below the stats on mobile */
-#about { display: grid; }
-#about .about-cv { order: 3; margin-top: 24px; }
-#about .about-main { display: contents; }
-#about .about-main > *:not(.about-cv) { margin-bottom: 24px; }
-#about .stats { order: 2; margin-top: 0; }
-
 @media (min-width: 1024px) {
-  #about { grid-template-columns: 1fr 440px; }
-  #about .about-main { display: grid; gap: 28px; align-content: start; }
-  #about .about-main > *:not(.about-cv) { margin-bottom: 0; }
-  #about .about-cv { order: 0; margin-top: 0; width: 240px; min-height: 52px; }
-  #about .stats { order: 0; gap: 36px; padding-top: 96px; }
-  .stats li { gap: 24px; }
-  .stat-num { width: 120px; font-size: 80px; line-height: 88px; }
-  .stat-label { font-size: 20px; line-height: 28px; }
+  .about-body { gap: 28px; }
+  .about-body .intro { max-width: none; }
   .facts { font-size: 18px; line-height: 28px; }
+  .about-cv { width: 240px; min-height: 52px; }
 }
 
 /* ==========================================================================
